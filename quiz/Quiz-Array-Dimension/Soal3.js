@@ -34,19 +34,19 @@ RULE:
 
 function minDistanceBetweenGreatest(arr) {
     // your code here
-    if (arr.length === 0) return 0; // handle empty array case
+    if (arr.length === 0) return 0;
     let max = arr[0];
     let maxIndices = [];
     let minDistance = Infinity;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max) {
             max = arr[i];
-            maxIndices = [i]; // reset indices if a new max is found
+            maxIndices = [i];
         } else if (arr[i] === max) {
-            maxIndices.push(i); // add index of the same max value
+            maxIndices.push(i);
         }
     }
-    if (maxIndices.length < 2) return 0; // if there's only one max value, return 0
+    if (maxIndices.length < 2) return 0;
     for (let i = 1; i < maxIndices.length; i++) {
         const distance = maxIndices[i] - maxIndices[i - 1];
         if (distance < minDistance) {

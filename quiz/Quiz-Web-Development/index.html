@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+    <div class="search-container">
+        <input type="text" id="myInputSearch" onkeyup="filterFunction()" placeholder="Search for items..." title="Type in an item">
+        <!-- <button onclick="clearSearch()">Clear</button> -->
+    </div>
+    <fieldset>
+        <legend>Instructions</legend>
+        <p>Click on the "Add" button to add a new item to your to-do list. Click on an item to mark it as completed.</p>
+        <p>To remove an item, click on the "x" next to it.</p>
+        <p>To mark an item as completed, click on the item itself.</p>
+    <ul id="myUL">
+        <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+    </ul>
+    </fieldset>
+</body>
+</html>
